@@ -1,27 +1,31 @@
-"use strict"
+"use strict";
 
+// Reduce sirve para poder realizar la suma de valores de una manera mas rapida
 const numeros = [1, 2, 3, 4, 5];
+const arregloNumeros = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
 
-let numero1 = 0;
-numeros.forEach(dato =>{
-    numero1 += dato;
+//Suma con un metodo forEach
+let sumaSimple = 0;
+numeros.forEach((numero) => (sumaSimple += numero));
+console.log("sumaSimple ", sumaSimple);
+
+// Suma con metodo reduce
+let reduceSimple = numeros.reduce((a, b) => a + b);
+let reduceLargo = numeros.reduce((a, b) => {
+  return a + b;
 });
-console.log("numero1", numero1);
+console.log("reduceSimple ", reduceSimple);
+console.log("reduceLargo ", reduceLargo);
 
-// let numero2 = numeros .reduce((a,b) => a + b);    <-- manera facil y corta
-let numero2 = numeros .reduce((a,b) =>{
-console.log(a, b);
-return a + b
-});
-console.log("numero2", numero2);
+/* *****************Suma de datos dentro de un objeto 👇🏻**************************** */
 
-const arregloNumeros = [{ id: 1 }, { id: 2}, { id: 3 }, { id: 4 }, { id: 5}];
+// Suma con un metodo forEach
+let sumaObjetos = 0;
+arregloNumeros.forEach((arregloNumero) => (sumaObjetos += arregloNumero.id));
+console.log("sumaObjetos ", sumaObjetos);
 
-let arregloNumero1 = 0;
-arregloNumeros.forEach((arregloNumero) => (arregloNumero1 += arregloNumero.id));
-console.log("arregloNumero1", arregloNumero1)
-
-let arregloNumero2 = arregloNumeros.reduce((a, b) => {
-    return a + b.id;
+// Suma con un metodo reduce
+let reduceObjetos = arregloNumeros.reduce((a, b) => {
+  return a + b.id;
 }, 0);
-console.log("arregloNumero2", arregloNumero2)
+console.log("reduceObjetos ", reduceObjetos);

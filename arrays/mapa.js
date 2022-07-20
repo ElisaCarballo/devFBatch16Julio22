@@ -8,21 +8,20 @@ console.log("numeros ", numeros);
 console.log("nuevosNumeros ", nuevosNumeros);
 
 const personas = [
-    { id: 1, nombre: "Sabina" },
-    { id: 2, nombre: "Daniel" },
-    { id: 3, nombre: "Flor" },
+  { id: 1, nombre: "Sabina" },
+  { id: 2, nombre: "Daniel" },
+  { id: 3, nombre: "Flor" },
 ];
 
 const datosPersonas1 = personas.map((dato) => {
-    dato.mascota = "perro";
-    dato.nombre = "Cambio";
-    if (dato.id == 2) dato.nombre = "Enrique";
-    return dato;
+  dato.mascota = "perro";
+  if (dato.id == 2) dato.nombre = "Enrique";
+  return dato;
 });
 
 const datosPersonas2 = personas.map((dato) => ({
-    ...dato,
-    arboles: "si",
+  ...dato,
+  arboles: "si",
 }));
 
 console.log("datosPersonas1 ", datosPersonas1);
