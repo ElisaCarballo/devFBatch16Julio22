@@ -12,9 +12,19 @@ const promesa = new Promise((resolve, reject) => {
 })
 
 // manejar la respuesta de la promesa
+// handler functions
 promesa
     .then((response) => {
     console.log(response);
+    return 18
+})
+    .then(() => {
+    console.log("soy el then, sin parametros");
+    return 72
+})
+    .then((response) => {
+    let suma = response + 8
+    console.log(suma);    
 })
     .catch((error) => {
     console.error(error);
