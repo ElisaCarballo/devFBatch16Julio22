@@ -29,8 +29,8 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 .grid-item:hover {
-    filter: opacity(0.9);
-    transform: scale(1.04);
+    filter: opacity(2);
+    transform: scale(2.04);
 }
 @media (max-width: 600px) {
     .grid-container {

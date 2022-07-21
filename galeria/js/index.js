@@ -3,9 +3,9 @@
 const d = document
 
 const galleryContainer = d.getElementById("gallery-container")
-const newLocal = "https://picsum.photos/v2/list?page=2&limit=9"
-const url = newLocal
+const url = "https://picsum.photos/v2/list?limit=12&page=8"
 
+//Funcion que crea las tarjetas y las añade al contenedor
 const printGallery = (url) => {
     const div = d.createElement("div")  
     div.classList.add("grid-item")
@@ -17,7 +17,11 @@ const getImages = async () => {
     const response = await fetch(url)
     const data = await response.json()
 
-data.forEach(element => {
+    console.log(data);
+
+    data.forEach((element) => {
     printGallery(element.download_url)
     });
 }
+
+getImages()
