@@ -15,6 +15,14 @@
     {
         "task": "Cocinar",
         "id" : 4
+    },
+    {
+        "task": "llevar niños",
+        "id" : 5
+    },
+    {
+        "task": "Estudiar ",
+        "id" : 6
     }
     ]
 }
